@@ -12,10 +12,10 @@ import UIKit
 // MARK: - Center Expression
 
 public struct CenterExpression<Offset: OffsetProtocol>: ExpressionProtocol {
-	fileprivate let lhs: CenterAnchor<NoOffset>
-	fileprivate let relation: Relation
-	fileprivate let rhs: CenterAnchor<Offset>
-	fileprivate let priority: Priority?
+	private let lhs: CenterAnchor<NoOffset>
+	private let relation: Relation
+	private let rhs: CenterAnchor<Offset>
+	private let priority: Priority?
 
 	fileprivate init(lhs: CenterAnchor<NoOffset>, relation: Relation, rhs: CenterAnchor<Offset>, priority: Priority? = nil) {
 		self.lhs = lhs

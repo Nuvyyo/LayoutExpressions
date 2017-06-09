@@ -18,10 +18,10 @@ import UIKit
 // MARK: - Edges Expression
 
 public struct EdgesExpression<Insets: InsetsProtocol>: ExpressionProtocol {
-	fileprivate let lhs: EdgesAnchor<NoInsets>
-	fileprivate let relation: Relation
-	fileprivate let rhs: EdgesAnchor<Insets>
-	fileprivate let priority: Priority?
+	private let lhs: EdgesAnchor<NoInsets>
+	private let relation: Relation
+	private let rhs: EdgesAnchor<Insets>
+	private let priority: Priority?
 
 	fileprivate init(lhs: EdgesAnchor<NoInsets>, relation: Relation, rhs: EdgesAnchor<Insets>, priority: Priority? = nil) {
 		self.lhs = lhs

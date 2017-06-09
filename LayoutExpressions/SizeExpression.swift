@@ -17,10 +17,10 @@ import UIKit
 // MARK: - Size Expression
 
 public struct SizeExpression<Size: SizeProtocol>: ExpressionProtocol {
-	fileprivate let lhs: SizeAnchor<NoSize>
-	fileprivate let relation: Relation
-	fileprivate let rhs: SizeAnchor<Size>
-	fileprivate let priority: Priority?
+	private let lhs: SizeAnchor<NoSize>
+	private let relation: Relation
+	private let rhs: SizeAnchor<Size>
+	private let priority: Priority?
 
 	fileprivate init(lhs: SizeAnchor<NoSize>, relation: Relation, rhs: SizeAnchor<Size>, priority: Priority? = nil) {
 		self.lhs = lhs
@@ -53,10 +53,10 @@ public struct SizeExpression<Size: SizeProtocol>: ExpressionProtocol {
 // MARK: - Constant Size Expression
 
 public struct ConstantSizeExpression: ExpressionProtocol {
-	fileprivate let lhs: SizeAnchor<NoSize>
-	fileprivate let relation: Relation
-	fileprivate let size: Size
-	fileprivate let priority: Priority?
+	private let lhs: SizeAnchor<NoSize>
+	private let relation: Relation
+	private let size: Size
+	private let priority: Priority?
 
 	fileprivate init(lhs: SizeAnchor<NoSize>, relation: Relation, size: Size, priority: Priority? = nil) {
 		self.lhs = lhs

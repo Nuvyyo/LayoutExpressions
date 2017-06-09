@@ -6,10 +6,10 @@ import UIKit
 // MARK: - Dimension Expression
 
 public struct DimensionExpression<Multiplier: MultiplierProtocol, Constant: ConstantProtocol>: DistinctExpressionType {
-	fileprivate let lhs: DimensionAnchor<NoMultiplier, NoConstant>
-	fileprivate let relation: Relation
-	fileprivate let rhs: DimensionAnchor<Multiplier, Constant>
-	fileprivate let priority: Priority?
+	private let lhs: DimensionAnchor<NoMultiplier, NoConstant>
+	private let relation: Relation
+	private let rhs: DimensionAnchor<Multiplier, Constant>
+	private let priority: Priority?
 
 	fileprivate init(lhs: DimensionAnchor<NoMultiplier, NoConstant>, relation: Relation, rhs: DimensionAnchor<Multiplier, Constant>, priority: Priority? = nil) {
 		self.lhs = lhs
@@ -47,10 +47,10 @@ public struct DimensionExpression<Multiplier: MultiplierProtocol, Constant: Cons
 // MARK: - Constant Dimension Expression
 
 public struct ConstantDimensionExpression: DistinctExpressionType {
-	fileprivate let lhs: DimensionAnchor<NoMultiplier, NoConstant>
-	fileprivate let relation: Relation
-	fileprivate let constant: ValueConstant
-	fileprivate let priority: Priority?
+	private let lhs: DimensionAnchor<NoMultiplier, NoConstant>
+	private let relation: Relation
+	private let constant: ValueConstant
+	private let priority: Priority?
 
 	fileprivate init(lhs: DimensionAnchor<NoMultiplier, NoConstant>, relation: Relation, constant: ValueConstant, priority: Priority? = nil) {
 		self.lhs = lhs

@@ -28,10 +28,10 @@ public struct YAxis: AxisProtocol {
 // MARK: - Axis Expression
 
 public struct AxisExpression<Axis: AxisProtocol, Constant: ConstantProtocol>: DistinctExpressionType {
-	fileprivate let lhs: AxisAnchor<Axis, NoConstant>
-	fileprivate let relation: Relation
-	fileprivate let rhs: AxisAnchor<Axis, Constant>
-	fileprivate let priority: Priority?
+	private let lhs: AxisAnchor<Axis, NoConstant>
+	private let relation: Relation
+	private let rhs: AxisAnchor<Axis, Constant>
+	private let priority: Priority?
 
 	fileprivate init(lhs: AxisAnchor<Axis, NoConstant>, relation: Relation, rhs: AxisAnchor<Axis, Constant>, priority: Priority? = nil) {
 		self.lhs = lhs
@@ -68,7 +68,7 @@ public struct AxisExpression<Axis: AxisProtocol, Constant: ConstantProtocol>: Di
 // MARK: - Axis Anchor
 
 public struct AxisAnchor<Axis: AxisProtocol, Constant: ConstantProtocol> {
-	fileprivate let axis: Axis
+	private let axis: Axis
 	public let constant: Constant
 
 	internal init(axis: Axis, constant: Constant) {

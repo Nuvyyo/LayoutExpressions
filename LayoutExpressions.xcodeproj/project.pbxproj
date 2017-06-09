@@ -161,10 +161,7 @@
 		AA1BCDB71BDC8E7A00AB6D1C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				AA5A6FEE1EEA2D9B00B6BB72 /* Common */,
-				AA5A6FED1EEA2D8D00B6BB72 /* tvOS */,
-				AAC2137E1EE8E2AC00999C65 /* AnchorsExtensionsProvider.swift */,
-				AA0D4DF41EE90FDE00A97F6E /* LayoutAreaAnchors.swift */,
+				AA5A6FF31EEAEC6300B6BB72 /* Anchors */,
 				AA1BCE1A1BE6971C00AB6D1C /* UIView+Expressions.swift */,
 				AA13D8C81BF4F35F00174DDF /* NSLayoutConstraint+Activation.swift */,
 			);
@@ -234,6 +231,17 @@
 				AA1BCE141BE6963000AB6D1C /* UILayoutGuide+Anchors.swift */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		AA5A6FF31EEAEC6300B6BB72 /* Anchors */ = {
+			isa = PBXGroup;
+			children = (
+				AAC2137E1EE8E2AC00999C65 /* AnchorsExtensionsProvider.swift */,
+				AA0D4DF41EE90FDE00A97F6E /* LayoutAreaAnchors.swift */,
+				AA5A6FEE1EEA2D9B00B6BB72 /* Common */,
+				AA5A6FED1EEA2D8D00B6BB72 /* tvOS */,
+			);
+			name = Anchors;
 			sourceTree = "<group>";
 		};
 		AACF91AF194008D300748874 = {
