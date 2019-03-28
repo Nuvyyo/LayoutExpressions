@@ -25,7 +25,7 @@ class PriorityTests: XCTestCase {
 
 	func testCustomIntPriority() {
 		let constraint = evaluateLayoutExpression(subview.anchors.top == container.anchors.top <<~ 950)
-		XCTAssert(constraint.priority == 950)
+		XCTAssert(Int(constraint.priority.rawValue) == 950)
 	}
 
 	func testSystemPriority() {

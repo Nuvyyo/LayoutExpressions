@@ -36,8 +36,8 @@ public struct CenterExpression<Offset: OffsetProtocol>: ExpressionProtocol {
 		let yConstraint = AnchorConstraints.constraintForRelation(relation: relation, leftAnchor: lhs.centerYAnchor, rightAnchor: rhs.centerYAnchor, constant: offset.vertical)
 
 		if let priority = priority {
-			xConstraint.priority = priority
-			yConstraint.priority = priority
+			xConstraint.priority = UILayoutPriority(rawValue: priority)
+			yConstraint.priority = UILayoutPriority(rawValue: priority)
 		}
 
 		return [xConstraint, yConstraint]

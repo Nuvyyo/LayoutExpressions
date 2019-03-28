@@ -25,7 +25,7 @@ class EdgesExpressionTests: XCTestCase {
 		let expression = (subviewAnchor == containerAnchor)
 		let constraints = expression.evaluateAll()
 
-		let tops = constraints.filter { $0.firstAttribute == NSLayoutAttribute.top }
+		let tops = constraints.filter { $0.firstAttribute == NSLayoutConstraint.Attribute.top }
 		XCTAssert(tops.count == 1, "Didn't find exactly one Top constraint.")
 		if tops.count == 1 {
 			let top = tops[0]
@@ -34,7 +34,7 @@ class EdgesExpressionTests: XCTestCase {
 			XCTAssert(top.secondItem === container)
 		}
 
-		let lefts = constraints.filter { $0.firstAttribute == NSLayoutAttribute.left }
+		let lefts = constraints.filter { $0.firstAttribute == NSLayoutConstraint.Attribute.left }
 		XCTAssert(lefts.count == 1, "Didn't find exactly one Left constraint.")
 		if lefts.count == 1 {
 			let left = lefts[0]
@@ -43,7 +43,7 @@ class EdgesExpressionTests: XCTestCase {
 			XCTAssert(left.secondItem === container)
 		}
 
-		let bottoms = constraints.filter { $0.firstAttribute == NSLayoutAttribute.bottom }
+		let bottoms = constraints.filter { $0.firstAttribute == NSLayoutConstraint.Attribute.bottom }
 		XCTAssert(bottoms.count == 1, "Didn't find exactly one Bottom constraint.")
 		if bottoms.count == 1 {
 			let bottom = bottoms[0]
@@ -52,7 +52,7 @@ class EdgesExpressionTests: XCTestCase {
 			XCTAssert(bottom.secondItem === container)
 		}
 
-		let rights = constraints.filter { $0.firstAttribute == NSLayoutAttribute.right }
+		let rights = constraints.filter { $0.firstAttribute == NSLayoutConstraint.Attribute.right }
 		XCTAssert(rights.count == 1, "Didn't find exactly one Right constraint.")
 		if rights.count == 1 {
 			let right = rights[0]
@@ -70,7 +70,7 @@ class EdgesExpressionTests: XCTestCase {
 		let expression = (subviewAnchor == containerAnchor - insets)
 		let constraints = expression.evaluateAll()
 		
-		let tops = constraints.filter { $0.firstAttribute == NSLayoutAttribute.top }
+		let tops = constraints.filter { $0.firstAttribute == NSLayoutConstraint.Attribute.top }
 		XCTAssert(tops.count == 1, "Didn't find exactly one Top constraint.")
 		if tops.count == 1 {
 			let top = tops[0]
@@ -78,7 +78,7 @@ class EdgesExpressionTests: XCTestCase {
 			XCTAssert(top.multiplier == 1.0)
 		}
 		
-		let lefts = constraints.filter { $0.firstAttribute == NSLayoutAttribute.left }
+		let lefts = constraints.filter { $0.firstAttribute == NSLayoutConstraint.Attribute.left }
 		XCTAssert(lefts.count == 1, "Didn't find exactly one Left constraint.")
 		if lefts.count == 1 {
 			let left = lefts[0]
@@ -86,7 +86,7 @@ class EdgesExpressionTests: XCTestCase {
 			XCTAssert(left.multiplier == 1.0)
 		}
 		
-		let bottoms = constraints.filter { $0.firstAttribute == NSLayoutAttribute.bottom }
+		let bottoms = constraints.filter { $0.firstAttribute == NSLayoutConstraint.Attribute.bottom }
 		XCTAssert(bottoms.count == 1, "Didn't find exactly one Bottom constraint.")
 		if bottoms.count == 1 {
 			let bottom = bottoms[0]
@@ -94,7 +94,7 @@ class EdgesExpressionTests: XCTestCase {
 			XCTAssert(bottom.multiplier == 1.0)
 		}
 		
-		let rights = constraints.filter { $0.firstAttribute == NSLayoutAttribute.right }
+		let rights = constraints.filter { $0.firstAttribute == NSLayoutConstraint.Attribute.right }
 		XCTAssert(rights.count == 1, "Didn't find exactly one Right constraint.")
 		if rights.count == 1 {
 			let right = rights[0]
@@ -110,7 +110,7 @@ class EdgesExpressionTests: XCTestCase {
 		let expression = (subviewAnchor == containerAnchor - 10)
 		let constraints = expression.evaluateAll()
 		
-		let tops = constraints.filter { $0.firstAttribute == NSLayoutAttribute.top }
+		let tops = constraints.filter { $0.firstAttribute == NSLayoutConstraint.Attribute.top }
 		XCTAssert(tops.count == 1, "Didn't find exactly one Top constraint.")
 		if tops.count == 1 {
 			let top = tops[0]
@@ -118,7 +118,7 @@ class EdgesExpressionTests: XCTestCase {
 			XCTAssert(top.multiplier == 1.0)
 		}
 		
-		let lefts = constraints.filter { $0.firstAttribute == NSLayoutAttribute.left }
+		let lefts = constraints.filter { $0.firstAttribute == NSLayoutConstraint.Attribute.left }
 		XCTAssert(lefts.count == 1, "Didn't find exactly one Left constraint.")
 		if lefts.count == 1 {
 			let left = lefts[0]
@@ -126,7 +126,7 @@ class EdgesExpressionTests: XCTestCase {
 			XCTAssert(left.multiplier == 1.0)
 		}
 		
-		let bottoms = constraints.filter { $0.firstAttribute == NSLayoutAttribute.bottom }
+		let bottoms = constraints.filter { $0.firstAttribute == NSLayoutConstraint.Attribute.bottom }
 		XCTAssert(bottoms.count == 1, "Didn't find exactly one Bottom constraint.")
 		if bottoms.count == 1 {
 			let bottom = bottoms[0]
@@ -134,7 +134,7 @@ class EdgesExpressionTests: XCTestCase {
 			XCTAssert(bottom.multiplier == 1.0)
 		}
 		
-		let rights = constraints.filter { $0.firstAttribute == NSLayoutAttribute.right }
+		let rights = constraints.filter { $0.firstAttribute == NSLayoutConstraint.Attribute.right }
 		XCTAssert(rights.count == 1, "Didn't find exactly one Right constraint.")
 		if rights.count == 1 {
 			let right = rights[0]
